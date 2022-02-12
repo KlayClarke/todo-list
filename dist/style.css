@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+  color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header .left {
+  margin: auto;
+  left: 0%;
+}
+
+header .right {
+  margin: auto;
+  right: 0;
+}
+
+.add {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

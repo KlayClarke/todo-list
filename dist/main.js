@@ -1,0 +1,1 @@
+(()=>{"use strict";document.querySelector(".create-todo").addEventListener("click",(function(){e()}));const e=()=>{const e=document.createElement("div");e.innerHTML=`${document.querySelector("input[name='title']").value}<br>${document.querySelector("textarea[name='description']").value}`,document.querySelector(".todos").appendChild(e)}})();

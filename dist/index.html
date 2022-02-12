@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>TODO</title>
   </head>
   <body>
@@ -21,9 +21,26 @@
       </div>
     </header>
     <main>
+      <div class="add">
+        <form action="" method="post">
+          <label for="title">Title</label><br />
+          <input type="text" name="title" id="title" placeholder="title" />
+          <br />
+          <label for="description">Description</label><br />
+          <textarea
+            name="description"
+            id="description"
+            cols="20"
+            rows="4"
+            placeholder="description"
+          ></textarea>
+          <br />
+          <button type="submit" class="create-todo">Create</button>
+        </form>
+      </div>
       <div class="todos"></div>
     </main>
     <footer></footer>
-    <script src="bundle.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
