@@ -17,11 +17,6 @@ header .left {
   left: 0%;
 }
 
-header .right {
-  margin: auto;
-  right: 0;
-}
-
 footer {
   position: fixed;
   bottom: 0;
