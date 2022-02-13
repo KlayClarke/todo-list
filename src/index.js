@@ -19,9 +19,19 @@ const createNewTODO = () => {
 
 const updateDisplay = () => {
   // parse local storage todos
-  // for each todo, display em
+  let todos = JSON.parse(localStorage.getItem("todos"));
+  // for each todo, display them on page
+  for (const [key, value] of Object.entries(todos)) {
+    let newTodo = document.createElement("div");
+    newTodo.innerHTML = `<h4>${JSON.stringify(
+      value.title
+    )}</h4><p>${JSON.stringify(value.description)}</p>`;
+    document.querySelector(".todos").appendChild(newTodo);
+  }
 };
 
 document.querySelector(".create-todo").addEventListener("click", function () {
   createNewTODO();
 });
+
+updateDisplay();
