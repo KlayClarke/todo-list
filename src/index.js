@@ -3,7 +3,7 @@ import "./draggable";
 import { compareAsc, format } from "date-fns";
 import { storageAvailable } from "./storage";
 
-const createTODO = () => {
+const createTodo = () => {
   if (!localStorage.getItem("todos")) {
     localStorage.setItem("todos", JSON.stringify({}));
   }
@@ -19,33 +19,43 @@ const createTODO = () => {
   localStorage.setItem("todos", JSON.stringify(newTodos));
 };
 
-const completeTODO = () => {
-  // allow user to tick todo like a checkbox
-  // append todo to a 'completed' file that houses the 100 most recent completed tasks
+const completeTodo = (id) => {
+  if (!localStorage.getItem("projects")) {
+    localStorage.setItem("project", JSON.stringify({}));
+  }
+  // complete todo, but keep it in local until entire project is complete
+  // display vis representation of completed todo vs uncompleted todo
 };
 
-const editTODO = () => {
-  // edit todo (delete todo and create another with same id)
+const updateTodo = (id) => {
+  // update todo in local
 };
 
-const deleteTODO = () => {
-  // delete todo
-  // have a trash icon and allow user to drag todo to trash for deletion
+const trashTodo = (id) => {
+  // delete todo from local
+  delete todo[id];
 };
 
 const updateDisplay = () => {
-  // parse local storage todos
-  let todos = JSON.parse(localStorage.getItem("todos"));
-  // for each todo, display them on page
-  for (const [key, value] of Object.entries(todos)) {
-    let newTodo = document.createElement("div");
-    newTodo.draggable = "true";
-    newTodo.classList.add("todo");
-    newTodo.setAttribute("id", key);
-    newTodo.innerText = `${JSON.stringify(value.title)}, ${JSON.stringify(
-      value.description
-    )}`;
-    document.querySelector("#todos").appendChild(newTodo);
+  // check for todos - if none, do nothing
+  if (!document.querySelectorAll(".todo")) {
+    return;
+  } else {
+    if (localStorage.getItem("todos")) {
+      // parse local storage todos
+      let todos = JSON.parse(localStorage.getItem("todos"));
+      // for each todo, display them on page
+      for (const [key, value] of Object.entries(todos)) {
+        let newTodo = document.createElement("div");
+        newTodo.draggable = "true";
+        newTodo.classList.add("todo");
+        newTodo.setAttribute("id", key);
+        newTodo.innerText = `${JSON.stringify(value.title)}, ${JSON.stringify(
+          value.description
+        )}`;
+        document.querySelector("#todos").appendChild(newTodo);
+      }
+    }
   }
 };
 
@@ -54,7 +64,8 @@ document.querySelector(".create-todo").addEventListener("click", function () {
     document.querySelector("input[name='title']").value &&
     document.querySelector("textarea[name='description']").value
   )
-    createTODO();
+    createTodo();
 });
 
+// update displayed list of todos after every refresh
 updateDisplay();
