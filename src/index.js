@@ -1,3 +1,4 @@
+import "./draggable";
 import { compareAsc, format } from "date-fns";
 import { storageAvailable } from "./storage";
 
@@ -39,10 +40,10 @@ const updateDisplay = () => {
     let newTodo = document.createElement("div");
     newTodo.draggable = "true";
     newTodo.classList.add("todo");
+    newTodo.setAttribute("id", key);
     newTodo.innerText = `${JSON.stringify(value.title)}, ${JSON.stringify(
       value.description
     )}`;
-
     document.querySelector("#todos").appendChild(newTodo);
   }
 };
