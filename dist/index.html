@@ -15,50 +15,37 @@
           <h1>TODO List</h1>
         </div>
       </div>
-      <div class="right">
-        <div class="projects">
-          <a href="">
-            <h3>Projects</h3>
-          </a>
-        </div>
-      </div>
     </header>
     <main>
-      <div class="add">
-        <form action="" method="post">
-          <label for="title">Title</label><br />
-          <input
-            type="text"
-            name="title"
-            id="title"
-            placeholder="title"
-            required
-          />
-          <br />
-          <label for="description">Description</label><br />
-          <textarea
-            name="description"
-            id="description"
-            cols="20"
-            rows="4"
-            placeholder="description"
-            required
-          ></textarea>
-          <br />
-          <button type="submit" class="create-todo">Create</button>
-        </form>
-      </div>
       <div id="todos"></div>
       <section id="chest-modal" class="modal">
         <div class="modal-content">
           <span class="close-button for-chest">&times;</span>
-          <h1>Hello, I am a chest modal</h1>
-        </div>
-      </section>
-      <section id="trash-modal" class="modal">
-        <div class="modal-content">
-          <span class="close-button for-trash">&times;</span>
-          <h1>Hello, I am a trash modal</h1>
+          <h1>Create a todo below</h1>
+          <div class="add">
+            <form action="" method="post">
+              <label for="title">Title</label><br />
+              <input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="title"
+                required
+              />
+              <br />
+              <label for="description">Description</label><br />
+              <textarea
+                name="description"
+                id="description"
+                cols="20"
+                rows="4"
+                placeholder="description"
+                required
+              ></textarea>
+              <br />
+              <button type="submit" class="create-todo">Create</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -66,11 +53,6 @@
       <div class="left">
         <div id="chest">
           <i class="fa-solid fa-toolbox fa-2x"></i>
-        </div>
-      </div>
-      <div class="right">
-        <div id="trash">
-          <i class="fa-regular fa-trash-can fa-2x"></i>
         </div>
       </div>
     </footer>
