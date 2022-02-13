@@ -1,3 +1,4 @@
+import "./modals";
 import "./draggable";
 import { compareAsc, format } from "date-fns";
 import { storageAvailable } from "./storage";
