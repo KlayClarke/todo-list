@@ -10,14 +10,13 @@
   </head>
   <body>
     <header>
-      <div class="left">
-        <div class="logo">
-          <h1>TODO List</h1>
-        </div>
+      <div class="logo">
+        <h1>TODO List</h1>
       </div>
     </header>
     <main>
-      <div id="todos"></div>
+      <section id="projects"></section>
+      <section id="todos"></section>
       <section id="chest-modal" class="modal">
         <div class="modal-content">
           <span class="close-button for-chest">&times;</span>
@@ -50,12 +49,15 @@
       </section>
     </main>
     <footer>
-      <div class="left">
-        <div id="chest">
-          <i class="fa-solid fa-toolbox fa-2x"></i>
-        </div>
+      <div id="chest">
+        <i class="fa-solid fa-toolbox fa-2x"></i>
       </div>
     </footer>
     <script src="main.js"></script>
   </body>
 </html>
+
+<!-- if user creates project, append project to top of front page -->
+<!-- if user creates lone todo, append todo to section below projects -->
+<!-- allow user to drag lone todos to projects -->
+<!-- when user hovers todo, show options for deletion and edit -->
