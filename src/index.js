@@ -1,7 +1,7 @@
 import { compareAsc, format } from "date-fns";
 import { storageAvailable } from "./storage";
 
-const createNewTODO = () => {
+const createTODO = () => {
   if (!localStorage.getItem("todos")) {
     localStorage.setItem("todos", JSON.stringify({}));
   }
@@ -17,12 +17,18 @@ const createNewTODO = () => {
   localStorage.setItem("todos", JSON.stringify(newTodos));
 };
 
+const completeTODO = () => {
+  // allow user to tick todo like a checkbox
+  // append todo to a 'completed' file that houses the 100 most recent completed tasks
+};
+
 const editTODO = () => {
   // edit todo (delete todo and create another with same id)
 };
 
 const deleteTODO = () => {
   // delete todo
+  // have a trash icon and allow user to drag todo to trash for deletion
 };
 
 const updateDisplay = () => {
@@ -36,6 +42,7 @@ const updateDisplay = () => {
     newTodo.innerText = `${JSON.stringify(value.title)}, ${JSON.stringify(
       value.description
     )}`;
+
     document.querySelector("#todos").appendChild(newTodo);
   }
 };
@@ -45,7 +52,7 @@ document.querySelector(".create-todo").addEventListener("click", function () {
     document.querySelector("input[name='title']").value &&
     document.querySelector("textarea[name='description']").value
   )
-    createNewTODO();
+    createTODO();
 });
 
 updateDisplay();

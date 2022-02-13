@@ -22,6 +22,38 @@ header .right {
   right: 0;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+}
+
+footer .left {
+  left: 0;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+footer .right {
+  position: absolute;
+  right: 0;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+footer i {
+  color: red;
+}
+
+footer i:hover {
+  color: gray;
+  cursor: pointer;
+}
+
 .add {
   background-color: gray;
   display: flex;
