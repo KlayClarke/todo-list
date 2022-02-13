@@ -71,3 +71,11 @@ footer i:hover {
 .todo:hover {
   background-color: lightgray;
 }
+
+.hide {
+  display: none;
+}
+
+.drag-over {
+  color: rgb(136, 12, 12);
+}
