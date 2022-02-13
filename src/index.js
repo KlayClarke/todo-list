@@ -17,16 +17,26 @@ const createNewTODO = () => {
   localStorage.setItem("todos", JSON.stringify(newTodos));
 };
 
+const editTODO = () => {
+  // edit todo (delete todo and create another with same id)
+};
+
+const deleteTODO = () => {
+  // delete todo
+};
+
 const updateDisplay = () => {
   // parse local storage todos
   let todos = JSON.parse(localStorage.getItem("todos"));
   // for each todo, display them on page
   for (const [key, value] of Object.entries(todos)) {
     let newTodo = document.createElement("div");
-    newTodo.innerHTML = `<h4>${JSON.stringify(
-      value.title
-    )}</h4><p>${JSON.stringify(value.description)}</p>`;
-    document.querySelector(".todos").appendChild(newTodo);
+    newTodo.draggable = "true";
+    newTodo.classList.add("todo");
+    newTodo.innerText = `${JSON.stringify(value.title)}, ${JSON.stringify(
+      value.description
+    )}`;
+    document.querySelector("#todos").appendChild(newTodo);
   }
 };
 
