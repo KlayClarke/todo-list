@@ -16,7 +16,9 @@
       </div>
       <div class="right">
         <div class="projects">
-          <h3>Projects</h3>
+          <a href="">
+            <h3>Projects</h3>
+          </a>
         </div>
       </div>
     </header>
@@ -24,7 +26,13 @@
       <div class="add">
         <form action="" method="post">
           <label for="title">Title</label><br />
-          <input type="text" name="title" id="title" placeholder="title" />
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="title"
+            required
+          />
           <br />
           <label for="description">Description</label><br />
           <textarea
@@ -33,6 +41,7 @@
             cols="20"
             rows="4"
             placeholder="description"
+            required
           ></textarea>
           <br />
           <button type="submit" class="create-todo">Create</button>
