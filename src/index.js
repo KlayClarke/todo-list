@@ -31,7 +31,11 @@ const updateDisplay = () => {
 };
 
 document.querySelector(".create-todo").addEventListener("click", function () {
-  createNewTODO();
+  if (
+    document.querySelector("input[name='title']").value &&
+    document.querySelector("textarea[name='description']").value
+  )
+    createNewTODO();
 });
 
 updateDisplay();
