@@ -28,3 +28,14 @@ header .right {
   justify-content: center;
   align-items: center;
 }
+
+.todo {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo:hover {
+  background-color: lightgray;
+}
