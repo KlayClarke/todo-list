@@ -20,29 +20,50 @@
       <section id="chest-modal" class="modal">
         <div class="modal-content">
           <span class="close-button for-chest">&times;</span>
-          <h1>Create a todo below</h1>
-          <div class="add">
+          <span>
+            <button type="button" class="form-toggle">Add Project</button>
+          </span>
+          <div class="project-form hide-form">
+            <h5>Create a project</h5>
             <form action="" method="post">
-              <label for="title">Title</label><br />
+              <label for="project-title">Project Title</label><br />
               <input
                 type="text"
-                name="title"
-                id="title"
-                placeholder="title"
+                name="project-title"
+                id="project-title"
+                placeholder="project title"
+                required
+              />
+              <button type="submit" class="project-create-button">
+                Create Project
+              </button>
+            </form>
+          </div>
+          <div class="todo-form">
+            <h5>Create a todo</h5>
+            <form action="" method="post">
+              <label for="todo-title">Todo Title</label><br />
+              <input
+                type="text"
+                name="todo-title"
+                id="todo-title"
+                placeholder="todo title"
                 required
               />
               <br />
-              <label for="description">Description</label><br />
+              <label for="todo-description">Todo Description</label><br />
               <textarea
-                name="description"
-                id="description"
+                name="todo-description"
+                id="todo-description"
                 cols="20"
                 rows="4"
-                placeholder="description"
+                placeholder="todo description"
                 required
               ></textarea>
               <br />
-              <button type="submit" class="create-todo">Create</button>
+              <button type="submit" class="todo-create-button">
+                Create Todo
+              </button>
             </form>
           </div>
         </div>
