@@ -33,14 +33,11 @@ footer i:hover {
 }
 
 #todos {
-  display: -ms-grid;
-  display: grid;
 }
 
 .project {
   background-color: lightblue;
   border: 1px solid lightcoral;
-  /* min-height: 12vh; */
 }
 
 .todo {

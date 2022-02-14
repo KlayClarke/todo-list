@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const projects = document.querySelectorAll(".project");
   const todos = document.querySelectorAll(".todo");
+
+  projects.forEach((project) => {
+    project.addEventListener("dragenter", dragEnter);
+    project.addEventListener("dragover", dragOver);
+    project.addEventListener("dragleave", dragLeave);
+    project.addEventListener("drop", drop);
+  });
 
   todos.forEach((todo) => todo.addEventListener("dragstart", dragStart));
   todos.forEach((todo) => todo.addEventListener("dragend", dragEnd));
@@ -15,23 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
     e.target.classList.remove("hide");
   }
 
-  const projects = document.querySelectorAll(".project");
-
-  projects.forEach((project) => {
-    project.addEventListener("dragenter", dragEnter);
-    project.addEventListener("dragover", dragOver);
-    project.addEventListener("dragleave", dragLeave);
-    project.addEventListener("drop", drop);
-  });
-
   function dragEnter(e) {
-    e.preventDefault();
-    e.target.classList.add("drag-over");
+    if (!e.target.classList.contains("todo")) {
+      e.preventDefault();
+      e.target.classList.add("drag-over");
+    }
   }
 
   function dragOver(e) {
-    e.preventDefault();
-    e.target.classList.add("drag-over");
+    if (!e.target.classList.contains("todo")) {
+      e.preventDefault();
+      e.target.classList.add("drag-over");
+    }
   }
 
   function dragLeave(e) {
