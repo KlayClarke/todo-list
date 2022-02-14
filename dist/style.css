@@ -40,7 +40,7 @@ footer i:hover {
 .project {
   background-color: lightblue;
   border: 1px solid lightcoral;
-  height: 12vh;
+  /* min-height: 12vh; */
 }
 
 .todo {
@@ -63,7 +63,7 @@ footer i:hover {
 }
 
 .drag-over {
-  color: rgb(136, 12, 12);
+  background-color: rgb(136, 12, 12);
 }
 
 .modal {
